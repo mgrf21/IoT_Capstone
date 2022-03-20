@@ -8,6 +8,7 @@ Nombre: ***Proyecto de piscicultura rural para el mejoramiento de su ecosistema 
 - [Resumen](#Resumen)
 - [Introducción](#Introducción)
 - [Productos](#Productos)
+- [Hardware](#Hardware)
 
 ### Participantes
 - *José Raúl Miranda Tello*
@@ -36,7 +37,17 @@ En este proyecto se busca la necesidad de adoptar y aplicar tecnologías de vang
 - -Implementar inteligencia artificial como parte del control eficiente de los procesos
 
 ### Productos
-- -Monitor de indicadors significativos del agua: pH, Temperatura, Calidad de Agua
+- -Monitor de indicadores significativos del agua: pH, Temperatura, Calidad de Agua
 - -Historial de los indicadores en tiempo real
 - -Notificación de eventos fuera de rango
 - -Visualización de la información de los indicadores, historial y eventos fuera de rango en tiempo real
+
+### Hardware
+- -Raspberry pi4
+- -Sensor de temperatura DS18B20 (3v - 5.5v)
+- -Sensor de pH modelo PH-4502C con electrodo E201-BNC
+- -Sensor TDS-Calidad de agua AShata
+- -ESP32
+- -GPIO extension board
+- -Cable extension board
+- -Protobard y accesorios
