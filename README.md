@@ -2,6 +2,7 @@
 Nombre: Proyecto de piscicultura rural para el mejoramiento de su ecosistema y su abastecimiento
 ![Image text](https://github.com/mgrf21/IoT_Capstone/blob/main/IoT%20Presentacion%20Acuicultura%20Gif.gif)
 ## Tabla de contenido
+- [Participantes](#participantes)
 - [Objetivos](#objetivos)
 - [Resumen](#Resumen)
 - [Introducción](#Introducción)
