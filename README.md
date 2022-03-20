@@ -5,7 +5,7 @@ Nombre: Proyecto de piscicultura rural para el mejoramiento de su ecosistema y s
 - [Objetivos](#objetivos)
 - [Resumen](#Resumen)
 - [Introducción](#Introducción)
-- ### Objetivos
+### Objetivos
 
 - -Granjas acuícolas inteligentes de comunidades apartadas de las ciudades para su autoabastecimiento.
 - -Mayor eficiencia, rendimiento y mantenimiento
