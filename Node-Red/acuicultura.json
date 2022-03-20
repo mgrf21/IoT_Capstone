@@ -1,0 +1,741 @@
+[
+    {
+        "id": "91ea029ef747f063",
+        "type": "tab",
+        "label": "Acuicultura",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "226f2c4481b9d058",
+        "type": "serial in",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "serial": "de82c5b2.3f5648",
+        "x": 75,
+        "y": 104,
+        "wires": [
+            [
+                "362204432630efac"
+            ]
+        ]
+    },
+    {
+        "id": "14d9e935e77a2c0a",
+        "type": "debug",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b295be4c3f1d3a66",
+        "type": "split",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "splt": ",",
+        "spltType": "str",
+        "arraySplt": "3",
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "topic",
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "a6e53ad44ff12987"
+            ]
+        ]
+    },
+    {
+        "id": "a6e53ad44ff12987",
+        "type": "function",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "func": "\nif (msg.parts.index == 0) {\n    global.set (\"temp\", msg.payload);\n} \nif (msg.parts.index >= 1) {\nreturn msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 100,
+        "wires": [
+            [
+                "7fd7ea443aa7aa12"
+            ]
+        ]
+    },
+    {
+        "id": "64392115606cc60e",
+        "type": "function",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "func": "\nif (msg.parts.index == 0) {\n    global.set (\"tds\", msg.payload);\n} \nif (msg.parts.index >= 1) {\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "43c5fa8efaae44c5",
+        "type": "function",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "func": "\n\nmsg.topic=\"INSERT INTO tilapia (TEMPERATURA, PH, TDS, DIAGNOSTICO) VALUES ('\"+global.get (\"temp\")+\"','\"+global.get (\"ph\")+\"','\"+ global.get (\"tds\") +\"','\" + global.get (\"diag\") +\"')\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "5f1beb353d430ded"
+            ]
+        ]
+    },
+    {
+        "id": "5f1beb353d430ded",
+        "type": "mysql",
+        "z": "91ea029ef747f063",
+        "mydb": "5985bd1225719007",
+        "name": "",
+        "x": 610,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81d53967a4d448a3",
+        "type": "ui_gauge",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "group": "52367552bd4e4e02",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "TEMPERATURA",
+        "label": "CELSIUS",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 870,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ceb5b757519f94b2",
+        "type": "ui_gauge",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "group": "52367552bd4e4e02",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "gtype": "wave",
+        "title": "Potencial Hidrógeno",
+        "label": "PH",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "14",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 880,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8bb4a19c5e8f9df5",
+        "type": "ui_gauge",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "group": "52367552bd4e4e02",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "gtype": "compass",
+        "title": "Total Solidos Disueltos",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 880,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "bfd164d8ee5e9129",
+        "type": "ui_button",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "group": "92dd90c6d675b949",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ALMACENAR DATOS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 400,
+        "wires": [
+            [
+                "43c5fa8efaae44c5"
+            ]
+        ]
+    },
+    {
+        "id": "1b59de6ec106b4d0",
+        "type": "ui_text",
+        "z": "91ea029ef747f063",
+        "group": "92dd90c6d675b949",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 730,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "865139a3ebcea96a",
+        "type": "function",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "func": "if (global.get (\"temp\") < 15 || global.get (\"temp\") > 37 ) {\n    msg.payload = \"temperatura valor critico. verificar sistema de recirculación\";\n} else if (global.get (\"ph\") < 6.5 || global.get (\"ph\") > 11) {\n    msg.payload = \"PH valor crítico, sospecha de contaminación\";\n} else if (global.get (\"tds\") > 450) {\n    msg.payload = \"TDS valor crítico, verifique calidad de agua\";    \n} else if (global.get (\"temp\") > 15 && global.get (\"temp\") < 36 && global.get (\"ph\") >= 6.5 && global.get (\"ph\") < 11 && global.get (\"tds\") < 450) {\n    msg.payload = \"Parametros en rango\";\n} else {\n    msg.payload = \"Fuera de rango, revisar\";\n}\nglobal.set (\"diag\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 340,
+        "wires": [
+            [
+                "1b59de6ec106b4d0"
+            ]
+        ]
+    },
+    {
+        "id": "362204432630efac",
+        "type": "split",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "splt": ":",
+        "spltType": "str",
+        "arraySplt": "5",
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "topic",
+        "x": 155,
+        "y": 24,
+        "wires": [
+            [
+                "17d8c9af5b693eef"
+            ]
+        ]
+    },
+    {
+        "id": "17d8c9af5b693eef",
+        "type": "function",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "func": "\nif (msg.parts.index == 0) {\n    global.set (\"titulo\", msg.payload);\n} \nif (msg.parts.index >= 1) {\nreturn msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 305,
+        "y": 24,
+        "wires": [
+            [
+                "b295be4c3f1d3a66",
+                "93056dc2d6c4ab1d",
+                "14d9e935e77a2c0a"
+            ]
+        ]
+    },
+    {
+        "id": "0f9969335e2d02f3",
+        "type": "split",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "splt": "\\r\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "64392115606cc60e"
+            ]
+        ]
+    },
+    {
+        "id": "7fd7ea443aa7aa12",
+        "type": "function",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "func": "\nif (msg.parts.index == 1) {\n    global.set (\"ph\", msg.payload);\n} \nif (msg.parts.index >= 2) {\nreturn msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 180,
+        "wires": [
+            [
+                "0f9969335e2d02f3"
+            ]
+        ]
+    },
+    {
+        "id": "a0c8f946747d5961",
+        "type": "function",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "func": "\nmsg.payload = global.get (\"temp\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 100,
+        "wires": [
+            [
+                "81d53967a4d448a3",
+                "e34405706db396ea"
+            ]
+        ]
+    },
+    {
+        "id": "3e4db6c044a10769",
+        "type": "function",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "func": "\nmsg.payload = global.get (\"ph\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 180,
+        "wires": [
+            [
+                "ceb5b757519f94b2",
+                "b258ba8870a92507"
+            ]
+        ]
+    },
+    {
+        "id": "d71c70708f862267",
+        "type": "function",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "func": "\nmsg.payload = global.get (\"tds\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 260,
+        "wires": [
+            [
+                "8bb4a19c5e8f9df5",
+                "0e14cbbf7884cc8a"
+            ]
+        ]
+    },
+    {
+        "id": "b6a0f39dae06cf68",
+        "type": "ui_audio",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "group": "5879b1471e20943a",
+        "voice": "",
+        "always": "",
+        "x": 720,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "e34405706db396ea",
+        "type": "ui_chart",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "group": "5e2a7796df8165d1",
+        "order": 1,
+        "width": "6",
+        "height": "3",
+        "label": "Celsius",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "30",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 860,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b258ba8870a92507",
+        "type": "ui_chart",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "group": "5e2a7796df8165d1",
+        "order": 2,
+        "width": "6",
+        "height": "3",
+        "label": "PH",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "5",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 870,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e14cbbf7884cc8a",
+        "type": "ui_chart",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "group": "5e2a7796df8165d1",
+        "order": 3,
+        "width": "6",
+        "height": "3",
+        "label": "PPM",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 870,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93056dc2d6c4ab1d",
+        "type": "mqtt out",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "topic": "codigoIoT/SIC/tilapia",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "aa3107cbb6f29f72",
+        "x": 540,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "c09fd13dcb09bf2c",
+        "type": "inject",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2400",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 340,
+        "wires": [
+            [
+                "43c5fa8efaae44c5"
+            ]
+        ]
+    },
+    {
+        "id": "3bec10143a4b8b91",
+        "type": "inject",
+        "z": "91ea029ef747f063",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 510,
+        "y": 180,
+        "wires": [
+            [
+                "3e4db6c044a10769",
+                "a0c8f946747d5961",
+                "d71c70708f862267",
+                "865139a3ebcea96a"
+            ]
+        ]
+    },
+    {
+        "id": "de82c5b2.3f5648",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "5985bd1225719007",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "acuicultura",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "52367552bd4e4e02",
+        "type": "ui_group",
+        "name": "Sensores",
+        "tab": "cabd630ce1b508d3",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "92dd90c6d675b949",
+        "type": "ui_group",
+        "name": "Diagnostico",
+        "tab": "cabd630ce1b508d3",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5879b1471e20943a",
+        "type": "ui_group",
+        "name": "Mensaje",
+        "tab": "cabd630ce1b508d3",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5e2a7796df8165d1",
+        "type": "ui_group",
+        "name": "Graficas",
+        "tab": "cabd630ce1b508d3",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aa3107cbb6f29f72",
+        "type": "mqtt-broker",
+        "name": "hivemq",
+        "broker": "52.28.133.146",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cabd630ce1b508d3",
+        "type": "ui_tab",
+        "name": "Acuicultura",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
