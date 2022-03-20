@@ -1,0 +1,53 @@
+
+Notas de apoyo para interactuar con la base de datos
+
+msg.topic="INSERT INTO tilapia (temperatura, hp, ec, diagnostico) VALUES ('"+global.get ("temperatura")+"','"+global.get ("ph")+"','"+ global.get ("ph") +"','" + global.get ("diag") +"')";
+*****************
+//Funcion diagnostico en Flow acuicultura
+if (msg.payload.temp > 125 && msg.payload.hp > 7 ) {
+    msg.payload = "temperatura alta. verifique unidad ECOFLOW.";
+} else if (msg.payload.ph < 6.8 || ce >1.4) {
+    msg.payload = "PH bajO, sospecha de contaminación. verifique calidad de agua en estanque.";
+} else if (msg.payload.temp < 24 && msg.payload.temp >18 && msg.payload.ph > 6.9 && msg.payload.ph < 8.2 && msg.payload.ce <= 1.4) {
+    msg.payload = "Diagnostico normal";
+} else {
+    msg.payload = "Verificar sensores";
+}
+global.set ("diag", msg.payload);
+return msg;
+
+
+msg.topic="INSERT INTO tilapia (temperatura, hp, ec, diagnostico) VALUES ('"+global.get ("temperatura")+"','"+global.get ("ph")+"','"+ global.get ("ph") +"','" + global.get ("diag") +"')";
+
+CREATE TABLE temperatura (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, temperatura INT (6) NOT NULL, co2 int (6) NOT NULL);
+
+CREATE TABLE tilapia (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, temperatura FLOAT(4,2) NOT NULL, hp FLOAT(4,2) NOT NULL, ce FLOAT(4,2) NOT NULL, diagnostico CHAR(255));
+ DESCRIBE tilapia;
++-------------+-----------------+------+-----+---------------------+----------------+
+| Field       | Type            | Null | Key | Default             | Extra          |
++-------------+-----------------+------+-----+---------------------+----------------+
+| id          | int(6) unsigned | NO   | PRI | NULL                | auto_increment |
+| fecha       | timestamp       | NO   |     | current_timestamp() |                |
+| temperatura | float(4,2)      | YES  |     | NULL                |                |
+| hp          | float(4,2)      | NO   |     | NULL                |                |
+| ce          | float(4,2)      | NO   |     | NULL                |                |
+| diagnostico | char(255)       | YES  |     | NULL                |                |
++-------------+-----------------+------+-----+---------------------+----------------+
+
+[acuicultura]>INSERT INTO tilapia (temperatura, hp, ce, diagnostico) VALUES (20.2, 7.5, 1.4,"CE valor critico");
+[acuicultura]>INSERT INTO tilapia (temperatura, hp, ce, diagnostico) VALUES (25.2, 7.5, 0.84,"temperatura valor critico");
+[acuicultura]> INSERT INTO tilapia (temperatura, hp, ce, diagnostico) VALUES (20.2, 6.5, 0.9,"PH valor critico");
+
+SELECT * FROM tilapia;
++----+---------------------+-------------+------+------+---------------------------+
+| id | fecha               | temperatura | hp   | ce   | diagnostico               |
++----+---------------------+-------------+------+------+---------------------------+
+|  1 | 2022-02-27 21:55:56 |       20.20 | 7.50 | 1.40 | CE valor critico          |
+|  2 | 2022-02-27 21:57:29 |       25.20 | 7.50 | 0.84 | temperatura valor critico |
+|  3 | 2022-02-27 21:58:35 |       20.20 | 6.50 | 0.90 | PH valor critico          |
++----+---------------------+-------------+------+------+---------------------------+
+
+msg.topic="INSERT INTO tilapia (temperatura, hp, ec, diagnostico) VALUES ('"+global.get ("temperatura")+"','"+global.get ("ph")+"','"+ global.get ("ph") +"','" + global.get ("diag") +"')";
+
+
+
