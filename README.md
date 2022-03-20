@@ -7,9 +7,9 @@ Nombre: Proyecto de piscicultura rural para el mejoramiento de su ecosistema y s
 - [Introducción](#Introducción)
 - ### Objetivos
 
-- Granjas acuícolas inteligentes de comunidades apartadas de las ciudades para su autoabastecimiento.
-- Mayor eficiencia, rendimiento y mantenimiento
-- Mayor seguridad por tecnología $G y 5G
-- Reducción de costos en la digitalización
-- Implementar inteligencia artificial como parte del control eficiente de los procesos
+- -Granjas acuícolas inteligentes de comunidades apartadas de las ciudades para su autoabastecimiento.
+- -Mayor eficiencia, rendimiento y mantenimiento
+- -Mayor seguridad por tecnología $G y 5G
+- -Reducción de costos en la digitalización
+- -Implementar inteligencia artificial como parte del control eficiente de los procesos
 
