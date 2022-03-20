@@ -22,3 +22,6 @@ Nombre: ***Proyecto de piscicultura rural para el mejoramiento de su ecosistema 
 ### Resumen
 - Un aspecto importante para un proyecto de acuicultura, y en este caso de peces tilapia, **es el agua**, pues esta debe tener ciertas *condiciones de calidad y características* por lo que el integrar el IoT en comunidades rurales alejadas para apoyar a la crianza de la tilapia y ayudar a mejorar los procesos involucrados monitoreando, gestionando y notificando información útil y relevante en tiempo real utilizando sensores y posible uso de actuadores y apoyar a la formación especializada y a la innovación con tecnología de punta y bajo costo.
 
+### Introducción
+- En este proyecto se busca la necesidad de adoptar y aplicar tecnologías de vanguardia y de bajo costo, con el fin de obtener información para el análisis de granjas acuícolas y de esta forma mejorar su desempeño y productividad en zonas rurales apartadas de las ciudades para su autoabastecimiento.
+
