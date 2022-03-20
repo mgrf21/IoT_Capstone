@@ -10,6 +10,7 @@ Nombre: ***Proyecto de piscicultura rural para el mejoramiento de su ecosistema 
 - [Productos](#Productos)
 - [Hardware](#Hardware)
 - [Software](#Software)
+- [Servicios](#Servicios)
 
 ### Participantes
 - *José Raúl Miranda Tello*
@@ -61,3 +62,9 @@ En este proyecto se busca la necesidad de adoptar y aplicar tecnologías de vang
 - -Base de datos MariaDB
 - -Visual Studio Code
 - -Librerias: Adafruit, Mysql.connector
+
+### Servicios
+- -Plataforma con herramientas de visualización de los indicadores e historial utilizando node-red
+- -Indicadores de tiempo real disponibles para usuarios de criaderos de tilapia.
+- -Notificaciones con usuarios responsables de criaderos
+- -Generación de informes con posible análisis de correlación entre las variables intervinientes.
