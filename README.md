@@ -3,6 +3,7 @@ Nombre: ***Proyecto de piscicultura rural para el mejoramiento de su ecosistema 
 ![Image text](https://github.com/mgrf21/IoT_Capstone/blob/main/IoT%20Presentacion%20Acuicultura%20Gif.gif)
 ## Tabla de contenido
 - [Participantes](#Participantes)
+- [Objetivo General](#Objetivo General)
 - [Objetivos](#objetivos)
 - [Resumen](#Resumen)
 - [Introducción](#Introducción)
@@ -11,6 +12,9 @@ Nombre: ***Proyecto de piscicultura rural para el mejoramiento de su ecosistema 
 - -José Raúl Miranda Tello
 - -Agustín Ruiz Amaya
 - -Miguel Guadalupe Ramírez Fonseca
+
+### Objetivo General
+- Implementación de un sistema de monitoreo de la calidad del agua, pH y temperatura por medio de sensores con el fin de ayudar a mejorar la crianza de peces en zonas rurales.
 
 ### Objetivos
 - -Granjas acuícolas inteligentes de comunidades apartadas de las ciudades para su autoabastecimiento.
