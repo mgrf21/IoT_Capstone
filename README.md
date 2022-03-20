@@ -13,7 +13,7 @@ Nombre: ***Proyecto de piscicultura rural para el mejoramiento de su ecosistema 
 - -Agustín Ruiz Amaya
 - -Miguel Guadalupe Ramírez Fonseca
 
-### Objetivo General
+### Objetivo_General
 - Implementación de un sistema de monitoreo de la calidad del agua, pH y temperatura por medio de sensores con el fin de ayudar a mejorar la crianza de peces en zonas rurales.
 
 ### Objetivos
