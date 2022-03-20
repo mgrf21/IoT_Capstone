@@ -9,6 +9,7 @@ Nombre: ***Proyecto de piscicultura rural para el mejoramiento de su ecosistema 
 - [Introducción](#Introducción)
 - [Productos](#Productos)
 - [Hardware](#Hardware)
+- [Software](#Software)
 
 ### Participantes
 - *José Raúl Miranda Tello*
@@ -51,3 +52,12 @@ En este proyecto se busca la necesidad de adoptar y aplicar tecnologías de vang
 - -GPIO extension board
 - -Cable extension board
 - -Protobard y accesorios
+
+### Software
+- -Raspberry pi OS
+- -Lenguaje de programación C
+- -MQTT HiveMQ
+- -Node-Red
+- -Base de datos MariaDB
+- -Visual Studio Code
+- -Librerias: Adafruit, Mysql.connector
