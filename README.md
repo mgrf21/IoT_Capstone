@@ -3,7 +3,7 @@ Nombre: ***Proyecto de piscicultura rural para el mejoramiento de su ecosistema 
 ![Image text](https://github.com/mgrf21/IoT_Capstone/blob/main/IoT%20Presentacion%20Acuicultura%20Gif.gif)
 ## Tabla de contenido
 - [Participantes](#Participantes)
-- [Objetivo General](#Objetivo General)
+- [Objetivo General](#Objetivo_General)
 - [Objetivos](#objetivos)
 - [Resumen](#Resumen)
 - [Introducción](#Introducción)
