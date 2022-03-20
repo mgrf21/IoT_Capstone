@@ -7,6 +7,7 @@ Nombre: ***Proyecto de piscicultura rural para el mejoramiento de su ecosistema 
 - [Objetivos Particulares](#objetivos-Particulares)
 - [Resumen](#Resumen)
 - [Introducción](#Introducción)
+- [Productos](#Productos)
 
 ### Participantes
 - *José Raúl Miranda Tello*
@@ -33,3 +34,9 @@ En este proyecto se busca la necesidad de adoptar y aplicar tecnologías de vang
 - -Mayor seguridad por tecnología $G y 5G
 - -Reducción de costos en la digitalización
 - -Implementar inteligencia artificial como parte del control eficiente de los procesos
+
+### Productos
+- -Monitor de indicadors significativos del agua: pH, Temperatura, Calidad de Agua
+- -Historial de los indicadores en tiempo real
+- -Notificación de eventos fuera de rango
+- -Visualización de la información de los indicadores, historial y eventos fuera de rango en tiempo real
