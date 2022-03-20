@@ -4,5 +4,5 @@ Nombre: Proyecto de piscicultura rural para el mejoramiento de su ecosistema y s
 ## Tabla de contenido
 - [Objetivos](#objetivos)
 - [Resumen](#Resumen)
-- [Introducci3%B3n] (#Introducci3%B3n)
+- [Resumen](#Resumen)
 - 
