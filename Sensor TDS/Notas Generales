@@ -37,3 +37,6 @@ Nota:
 1. Las sondas no se pueden utilizar en agua por encima de 55 ° C.
 2. La sonda no debe colocarse demasiado cerca del borde del contenedor, ya que afectará la pantalla.
 3. La cabeza y el cable de la sonda son impermeables y se pueden sumergir en agua, pero la interfaz de conexión y la placa adaptadora de señal no son impermeables. Presta atención al uso.
+
+Librería de apoyo disponible en: https://github.com/DFRobot/GravityTDS
+Información útil disponible en: https://wiki.dfrobot.com/Gravity__Analog_TDS_Sensor___Meter_For_Arduino_SKU__SEN0244
