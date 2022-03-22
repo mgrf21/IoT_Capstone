@@ -1,14 +1,22 @@
 Notas para la Base de Datos del proyecto de acuicultura
+Comandos para instalar paquete mysql-server
+	>sudo apt install mysql-server
+	>mysql --version 	//verificar version instalada
+	>sudo mysql		//acceder al server
+Crear un nuevo usuario con el comando:
+	>CREATE USER 'usuarioacuicultura'@'localhost' IDENTIFIED BY 'tilapia'; 
+Se otorga acceso para poder escribir y visualizar la información de las bases de datos con el siguiente comando:
+	>GRANT ALL PRIVILEGES ON *.* TO 'usuarioacuicultura'@'localhost' WITH GRANT OPTION;
 
 COMANDOS en msql;
 	-Entrar a MSQL
-		> sudo mysql PARA SUPERUSUARIO mysql -u Raul -p
+		> sudo mysql
 	-Crear base de datos
 		> CREATE DATABASE acuicultura;
 	-Seleccionar la base de datos
 		> USE acuicultura;
 	-Crear tabla 
-		> CREATE TABLE tilapia (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, TEMPERATURA float (4.2) NOT NULL, PH float (4.2) NOT NULL, TMS float (4.2) NOT NULL, DIAGNOSTICO CHAR(255);
+		> CREATE TABLE tilapia (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, TEMPERATURA CHAR(6) NOT NULL, PH CHAR(6) NOT NULL, PPM CHAR(6) NOT NULL, DIAGNOSTICO CHAR(255);
 
 	-Seleccionar DATABASE acuicultura
 		> USE acuicultura;
@@ -20,7 +28,7 @@ COMANDOS en msql;
 		> SELECT * FROM tilapia;
 
 	-Crear query para tabla tilapia en BD acuicultura
-INSERT INTO tilapia (TEMPERATURA, PH, TDS, DIAGNOSTICO) VALUES ('7.5', '21.5', '8.8', 'temperatura, PH y TDS en estanque dentro de rango);
+INSERT INTO tilapia (TEMPERATURA, PH, PPM, DIAGNOSTICO) VALUES ('7.5', '21.5', '8.8', 'Temperatura, PH y PPM en estanque dentro de rangos');
 
 	-Crear query en node-red para tabla tilapia en BD acuicultura
-msg.topic="INSERT INTO tilapia (TEMPERATURA, PH, TMS, DIAGNOSTICO) VALUES ('"+global.get ("ph")+"','"+global.get ("temperatura")+"','" + global.get ("tds") +"'),'" + global.get ("diagnostico") +"');
+msg.topic="INSERT INTO tilapia (TEMPERATURA, PH, PPM, DIAGNOSTICO) VALUES ('"+global.get ("ph")+"','"+global.get ("temperatura")+"','" + global.get ("tds") +"'),'" + global.get ("diagnostico") +"');
