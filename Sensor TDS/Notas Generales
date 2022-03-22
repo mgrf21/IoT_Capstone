@@ -13,6 +13,7 @@ Este sensor es funcionalmente igual al sensor de conductividad de agua Ejgoov co
 
 Descripción del producto
 
+Sensor analógico TDS (Total Dissolved Solids) para Arduino™. Mide la cantidad de sólidos disueltos en el agua, esto con el fin de saber la claridad del agua. El TDS indica cuántos miligramos de sólidos solubles hay por litro de agua.
 Este producto es plug and play y fácil de usar. El amplio suministro de voltaje de 3.3 ~ 5.5V y la salida de señal analógica de 0 ~ 2.3V hacen que este producto sea compatible con el sistema de control de 5V, 3.3V, que se puede usar fácilmente en el sistema de control listo para usar. La fuente de excitación utilizada para la medición utiliza una señal de CA, que puede prevenir eficazmente la polarización de la sonda, prolongar la vida útil de la sonda y aumentar la estabilidad de la señal de salida. La sonda es una sonda impermeable que se puede sumergir en agua durante largos períodos de tiempo.
 
 Especificaciónes del Sensor de conductividad del agua
