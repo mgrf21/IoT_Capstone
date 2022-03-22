@@ -9,3 +9,30 @@ Este sensor TDS Indica cuántos miligramos de sólidos disueltos se disuelven en
 
 Por lo tanto, el tamaño del TDS se puede utilizar como una de las bases para reflejar la limpieza del agua y en consecuencia la calidad del agua. El producto es plug and play y fácil de usar. Además, el amplio voltaje de alimentación de 3.3 ~ 5.5V y la salida de señal analógica de 0 ~ 2.3V hacen que este producto sea confiable.
 Un probador TDS de uso común es un lápiz TDS. Aunque es barato y fácil de usar, no transfiere datos al sistema de control, lo que permite el monitoreo y análisis en línea a largo plazo de la calidad del agua. 
+Este sensor es funcionalmente igual al sensor de conductividad de agua Ejgoov con las mismas características que se enlistan a continuación
+
+Descripción del producto
+
+Este producto es plug and play y fácil de usar. El amplio suministro de voltaje de 3.3 ~ 5.5V y la salida de señal analógica de 0 ~ 2.3V hacen que este producto sea compatible con el sistema de control de 5V, 3.3V, que se puede usar fácilmente en el sistema de control listo para usar. La fuente de excitación utilizada para la medición utiliza una señal de CA, que puede prevenir eficazmente la polarización de la sonda, prolongar la vida útil de la sonda y aumentar la estabilidad de la señal de salida. La sonda es una sonda impermeable que se puede sumergir en agua durante largos períodos de tiempo.
+
+Especificaciónes del Sensor de conductividad del agua
+Placa adaptadora de señal: Voltaje de entrada: DC3.3 ~ 5.5V
+Señal de salida: 0 ~ 2,3 V
+Corriente de trabajo: 3 ~ 6mA
+Rango de medición: 0 ~ 1000ppm
+Precisión de la medición: ± 10% F.S. (25 ℃)
+Tamaño: Aprox. 42 x 32 mm / 1,7 x 1,3 pulgadas
+Interfaz del módulo: XH2.54-3P
+Interfaz de electrodo: XH2.54-2P
+Número de sondas: 2
+Longitud total: Aprox. 83 cm / 32,7 pulgadas
+Interfaz de conexión: XH2.54-2P
+Color blanco
+
+Otro: sonda impermeable
+
+Nota:
+
+1. Las sondas no se pueden utilizar en agua por encima de 55 ° C.
+2. La sonda no debe colocarse demasiado cerca del borde del contenedor, ya que afectará la pantalla.
+3. La cabeza y el cable de la sonda son impermeables y se pueden sumergir en agua, pero la interfaz de conexión y la placa adaptadora de señal no son impermeables. Presta atención al uso.
