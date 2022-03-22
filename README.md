@@ -1,6 +1,6 @@
 # IoT para Granja Acuícola
 Nombre: ***Proyecto de Acuicultura rural para el mejoramiento de su ecosistema y su abastecimiento***
-![Image text](https://github.com/mgrf21/IoT_Capstone/blob/main/IoT%20Presentacion%20Acuicultura%20Gif.gif)
+![Image text](https://github.com/mgrf21/IoT_Capstone/blob/main/Imagenes/IoT%20Presentacion%20Acuicultura.gif)
 ## Tabla de contenido
 - [Participantes](#Participantes)
 - [Objetivo General](#Objetivo-General)
