@@ -34,7 +34,7 @@ Un aspecto importante para un proyecto de acuicultura, y en este caso de peces t
 En este proyecto se busca la necesidad de adoptar y aplicar tecnologías de vanguardia y de bajo costo, con el fin de obtener información para el análisis de granjas acuícolas y de esta forma mejorar su desempeño y productividad en zonas rurales apartadas de las ciudades para su autoabastecimiento y contribuir a:
 - -Granjas acuícolas inteligentes de comunidades apartadas de las ciudades para su autoabastecimiento.
 - -Mayor eficiencia, rendimiento y mantenimiento
-- -Mayor seguridad por tecnología $G y 5G
+- -Mayor seguridad por tecnología 4G y 5G
 - -Reducción de costos en la digitalización
 - -Implementar inteligencia artificial como parte del control eficiente de los procesos
 
