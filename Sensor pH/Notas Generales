@@ -1,1 +1,36 @@
 #Carpeta con información relacionada con el sensor PH-4502C Sensor de pH líquido con electrodo E201-BNC
+
+INFORMACIÓN
+¿Qué es PH-4502C Sensor de PH?
+El modulo PH-4502C Sensor de PH es un dispositivo que permite medir el PH con ayuda de una sonda que es la que toma la lectura (electrodo E201) mediante el conector BCN.
+
+¿Para qué sirve el PH-4502C Sensor de PH?
+El PH-4502C es útil si cuentas con un jardín hidropónico, acuario, laboratorio , o que realices algún proceso como fermentación de cerveza en donde requieras medir el PH.
+
+ESPECIFICACIÓN Y CARACTERÍSTICAS
+Modulo: PH-4502C
+Voltaje de Alimentación: 5 V
+Corriente: 10mA
+Dimensiones: 42 X 32 X 20 mm
+Electrodo E201-BNC
+Tipo de sonda: Grado de laboratorio.
+Tiempo de Respuesta: 5 seg
+Rango de detección: 0 ~ 14.(acido /base)
+Rango de temperatura:0 – 80°C
+Temperatura de trabajo:10~50°C
+Humedad de trabajo: 95 RH sin condensación
+DOCUMENTACIÓN Y RECURSOS
+PH-4502C – Wiki
+Pinout-Sensor de PH Liquido
+Esquemático-PH-4502C
+INFORMACIÓN ADICIONAL
+Recomendaciones de Uso
+Utilice una fuente de alimentación de conmutación externa y mantenga el voltaje lo más cerca posible de + 5,00 V. El sensor será mas preciso.
+Antes de colocar el electrodo en uso continuo cada vez, debe calibrarlo con la solución estándar para garantizar resultados precisos. La mejor temperatura ambiente es de aproximadamente 25 ℃ y el valor de pH es conocido, confiable y cercano al valor medido. Cuando la lectura sea un valor ácido, el valor de pH de la solución estándar debe ser 4,00. Si mide la muestra alcalina, el valor de pH de la solución estándar debe ser 9,18.
+Antes de que el electrodo de pH se pueda utilizar en diferentes soluciones, es necesario utilizar agua para lavarlo, recomendamos utilizar agua desionizada.
+Si desea medir el valor de pH de otra solución, primero debe lavar el electrodo de pH.
+¿Cómo utilizar el PH-4502C?
+
+Cuenta con un potenciómetro de offset el cual te ayuda a calibrar la medición de PH (el mas cercano al conector BNC) mientras que el otro potenciómetro controla la salida Do la cual se activa cuando el PH haya alcanzado el limite que hayamos configurado a través del potenciómetro cabe mencionar que la salida Do es de 3.7V como salida alta.
+
+El pin Po puede conectarse directamente a un pin analógico de un Arduino, PIC o cualquier tecnología TTL, por lo que no es necesario alguna librería especifica para que podamos utilizarlo. Como adicional cuenta con dos indicadores LED uno para señalar la alimentación del circuito y otro para señalar la salida Do.
