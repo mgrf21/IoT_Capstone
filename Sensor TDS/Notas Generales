@@ -1,1 +1,11 @@
 # Información relacionada con el sensor TDS - Calidad de agua
+Se utiliza el Sensor de Detección de Calidad de Agua Analógico TDS con 2 Sondas para Monitoreo de Calidad de Agua Doméstica e Hidroponía marca ASHATA
+
+El sensor TDS es compatible con Arduino y tambien puede utilizarse con el ESP32 y se utiliza para medir el valor TDS del agua y el valor de TDS refleja que tan limpia es el agua.
+
+Además se puede utilizar para pruebas de calidad del agua en el campo del agua doméstico y de hidroponía.
+
+Este sensor TDS Indica cuántos miligramos de sólidos disueltos se disuelven en 1 litro de agua. En general, el valor más alto de TDS significa que cuanto más lisado esté contenido en el agua y menos clara se encuentre el agua.
+
+Por lo tanto, el tamaño del TDS se puede utilizar como una de las bases para reflejar la limpieza del agua y en consecuencia la calidad del agua. El producto es plug and play y fácil de usar. Además, el amplio voltaje de alimentación de 3.3 ~ 5.5V y la salida de señal analógica de 0 ~ 2.3V hacen que este producto sea confiable.
+Un probador TDS de uso común es un lápiz TDS. Aunque es barato y fácil de usar, no transfiere datos al sistema de control, lo que permite el monitoreo y análisis en línea a largo plazo de la calidad del agua. 
