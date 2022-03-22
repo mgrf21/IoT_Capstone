@@ -1,2 +1,3 @@
 #Carpeta con información relacionada al Sensor de Temperatura Digital DS18B20 de Acero Inoxidable Sumergible
 Información tomada de: https://uelectronics.com/producto/sensor-de-temperatura-digital-ds18b20-de-acero-inoxidable-sumergible/
+Se usa libreria OneWire disponible en: https://github.com/PaulStoffregen/OneWire
