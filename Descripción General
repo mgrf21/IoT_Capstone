@@ -2,35 +2,37 @@
 
 Descripción:
 
-**Este curso presenta un sistema de monitorización de indicadores significativos del agua como el pH, la temperatura y la calidad del agua con el fin de auxiliar, a partir de sus históricos y correspondiente análisis, a mejorar el ecosistema de cultivo de peces en general y en o particular del pez Tilapia.**
+-Este curso presenta un sistema de monitorización de indicadores significativos del agua como el pH, la temperatura y la calidad del agua con el fin de auxiliar, a partir de sus históricos y correspondiente análisis, a mejorar el ecosistema de cultivo de peces en general y en o particular del pez Tilapia.
 
 Objetivo:
 
-Al finalizar el curso se podrá implementar un sistema de monitoreo de calidad de agua, pH y temperatura por medio de sensores de bajo costo y alta eficiencia con el fin de ayudar a mejorar la crianza de peces en zonas rurales.
+-Al finalizar el curso se podrá implementar un sistema de monitoreo de calidad de agua, pH y temperatura por medio de sensores de bajo costo y alta eficiencia con el fin de ayudar a mejorar la crianza de peces en zonas rurales.
 
 A quién se dirige:
 
-El presente curso se dirige a todo aquella persona interesada en conocer el Internet de las cosas (IoT) y coadyuvar a lat crianza de peces en zonas rurales siendo amable con el entorno ambiental del ecosistema relacionado con la acuicultura.
+-El presente curso se dirige a todo aquella persona interesada en conocer el Internet de las cosas (IoT) y coadyuvar a lat crianza de peces en zonas rurales siendo amable con el entorno ambiental del ecosistema relacionado con la acuicultura.
 
 Requisitos:
 
-Conocimientos básicos de programación.
-Experiencia básica en el uso de entornos o plataformasWEB.
+-Conocimientos básicos de programación.
+-Experiencia básica en el uso de entornos o plataformasWEB.
+
 Software:
 
-Lenguaje C.
-Arduino IDE.
-MQTT HivMQ.
-Visual Studio Code
-Git-Hub para el respaldo de programas y su socialización.
+-Lenguaje C.
+-Arduino IDE.
+-MQTT HivMQ.
+-Visual Studio Code
+-Git-Hub para el respaldo de programas y su socialización.
+
 Hardware:
 
-Raspberry Pi 4
-Microcontrolador ESP32 o similar.
-Sensores:
-Sensor TDS -Calidad de agua/Turbidez.
-Sensor de Temperatura DS18B20 3-5.5
-Sensor de pH modelo PH-4502C con electrodo E201-BNC
+-Raspberry Pi 4
+-Microcontrolador ESP32 o similar.
+-Sensores:
+--Sensor TDS -Calidad de agua/Turbidez.
+--Sensor de Temperatura DS18B20 3-5.5
+--Sensor de pH modelo PH-4502C con electrodo E201-BNC
 GPIO extensión board
 Cable de extensión board
 Protoboard
