@@ -20,6 +20,7 @@
 *   R              5 V
 *   Y              GPIO 2
 *   
+*SENSOR DE PH
 * PH-4502C        ESP32CAM       
 *   VCC             5 V             
 *   GND             GND             
