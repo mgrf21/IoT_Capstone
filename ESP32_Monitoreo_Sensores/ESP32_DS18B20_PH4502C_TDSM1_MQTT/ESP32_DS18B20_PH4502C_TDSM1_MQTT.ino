@@ -61,7 +61,7 @@ int phValor;
 float cal = 3.5; //Valor de corrección por offset 
 
 
-// Variables para promedio y odenar muestras
+// Variables para promedio y ordenar muestras
 unsigned long int avgVal;
 int buf[muestra];
 int burb; 
@@ -85,7 +85,7 @@ void loop(void) {
 // Llama a sensores.requestTemperatures() para emitir una temperatura global y solicitudes a todos los dispositivos en el bus
 sensors.requestTemperatures(); 
 
-// ¿Por qué "byIndex"?Puede tener más de un IC en el mismo bus. 0 se refiere al primer IC en el cable
+// ¿Por qué "byIndex"? Puede tener más de un IC en el mismo bus. 0 se refiere al primer IC en el cable
 temperatura = sensors.getTempCByIndex(0);  //TemC para celsius; TempF para farenheit
 temperatura = temperatura-3;    // Ajuste de valor
 Serial.print("Temperatura, ph y ppm: ");
@@ -152,8 +152,8 @@ avgVal = avgVal+buf[i];
 tdsVoltaje=(avgVal /(muestra-(2*n))) * (5.0/4096); //convierte a milivolt la CAD de 12 bits ESP32
 tdsValor = tdsVoltaje*700;  // Puede considerarse 500, 650 o 700 en función del tipo de sensor
 
-//Opción que considera la variación en la tempertura
-/*float compensationCoefficient=1.0+0.02*(temperatura-25.0);    //formula compensación de temperature: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
+//Opción que considera la variación en la temperatura
+/*float compensationCoefficient=1.0+0.02*(temperatura-25.0);    //formula compensación de temperatura: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0));
 float compensationVolatge=avgVal/compensationCoefficient;  //temperature compensation
 tdsValor=(133.42*compensationVolatge*compensationVolatge*compensationVolatge - 255.86*compensationVolatge*compensationVolatge + 857.39*compensationVolatge)*0.5; //convert voltage a ppm 
 */
